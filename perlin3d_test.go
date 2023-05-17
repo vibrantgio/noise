@@ -35,7 +35,7 @@ func TestImagePerlin3D(t *testing.T) {
 	}
 
 	// Write reference image
-	if true {
+	if write_reference_image {
 		f, err := os.Create(SourceFile("ref_p3d.png"))
 		if err != nil {
 			t.Errorf("failed to create reference image: %v", err)

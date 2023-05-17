@@ -7,6 +7,8 @@ import (
 	"runtime"
 )
 
+const write_reference_image = false
+
 func SourceFile(filename string) string {
 	_, sourcepath, _, _ := runtime.Caller(1)
 	return path.Join(path.Dir(sourcepath), filename)
