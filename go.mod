@@ -1,3 +1,3 @@
-module github.com/reactivego/noise
+module github.com/vibrantgio/noise
 
 go 1.20
