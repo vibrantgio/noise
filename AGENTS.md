@@ -8,13 +8,10 @@ Gustavson's public-domain implementation by way of josephg/noisejs.
 **Layer.** Outside ADR-001's tier table: a support library, which the rule
 binds in one direction only — every tier may import it, and it may import
 nothing in the table itself. One module, one package, standard library
-only. Its root module imports nothing else in the organization. No other
-repository's root module imports it; outside the tier table it is imported
-by the adapter module `seen/context/gio` and the workbench application
-`launcher`. Both directions are measured rather than typed —
-`scripts/check-layers.sh --edges` reports the graph and
-`scripts/sync-agents.sh` renders these sentences from it — so correcting
-them here changes nothing.
+only. Its root module imports nothing else in the organization. Both
+directions are measured rather than typed — `scripts/check-layers.sh
+--edges` reports the graph and `scripts/sync-agents.sh` renders these
+sentences from it — so correcting them here changes nothing.
 
 **Read the canonical guide before you write code against this module.** It is
 the organization's one agent guide — the module inventory with current tags,
