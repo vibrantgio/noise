@@ -34,7 +34,6 @@ func TestImageSimplex3D(t *testing.T) {
 		}
 	}
 
-	// Write reference image
 	if write_reference_image {
 		f, err := os.Create(SourceFile("ref_s3d.png"))
 		if err != nil {
@@ -44,7 +43,6 @@ func TestImageSimplex3D(t *testing.T) {
 		png.Encode(f, rgba)
 	}
 
-	// Compare with reference image
 	f := bytes.NewBuffer(nil)
 	png.Encode(f, rgba)
 	if !bytes.Equal(f.Bytes(), ref_s3d) {
@@ -62,7 +60,6 @@ func FuzzSimplex3D(f *testing.F) {
 		{1.0, 0.0, 1.0},
 		{1.0, 1.0, 0.0},
 		{1.0, 1.0, 1.0},
-		// {1.0, 170.0, 0.0},
 	}
 	for _, tc := range testcases {
 		f.Add(tc[0], tc[1], tc[2])

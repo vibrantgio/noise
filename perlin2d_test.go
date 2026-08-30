@@ -34,7 +34,6 @@ func TestImagePerlin2D(t *testing.T) {
 		}
 	}
 
-	// Write reference image
 	if write_reference_image {
 		f, err := os.Create(SourceFile("ref_p2d.png"))
 		if err != nil {
@@ -44,7 +43,6 @@ func TestImagePerlin2D(t *testing.T) {
 		png.Encode(f, rgba)
 	}
 
-	// Compare with reference image
 	f := bytes.NewBuffer(nil)
 	png.Encode(f, rgba)
 	if !bytes.Equal(f.Bytes(), ref_p2d) {
