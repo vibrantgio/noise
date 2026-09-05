@@ -6,7 +6,7 @@ Package noise implements Perlin and Simplex noise functions.
 
 Adapted from https://github.com/josephg/noisejs/blob/master/perlin.js
 
-This code was placed in the public domain by its original author,
+This code was placed in the public domain by its original developer,
 Stefan Gustavson. You may use it as you see fit, but attribution
 is appreciated.
 
