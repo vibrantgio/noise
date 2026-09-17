@@ -17,11 +17,8 @@ methods are used to achieve similar functionality.
 
 ## For coding assistants
 
-Read the canonical guide before writing code against this module — the module
-inventory with current tags, the application skeleton, MVU and rx semantics,
-typography, and the pitfalls that are not guessable:
-
-<https://raw.githubusercontent.com/vibrantgio/workbench/master/llms.txt>
+Read the org guide before you write code against this module: the plan
+root's [`AGENTS.md`](https://github.com/vibrantgio/.github/blob/master/AGENTS.md).
 
 [`AGENTS.md`](./AGENTS.md) in this repository has the build and test commands,
 and — since nothing else in the organization says so — how to regenerate the
