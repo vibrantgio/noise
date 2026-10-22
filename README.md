@@ -16,7 +16,7 @@ defined on it stands in for the original class.
 ## For coding assistants
 
 Read the org guide before you write code against this module: the plan
-root's [`AGENTS.md`](https://github.com/vibrantgio/.github/blob/master/AGENTS.md).
+root's [`AGENTS.md`](https://github.com/vibrantgio/organisation/blob/master/AGENTS.md).
 
 [`AGENTS.md`](./AGENTS.md) in this repository has the build and test commands,
 and — since nothing else in the organization says so — how to regenerate the
