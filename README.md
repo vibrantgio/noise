@@ -10,14 +10,22 @@ This code was placed in the public domain by its original developer,
 Stefan Gustavson. You may use it as you see fit, but attribution
 is appreciated.
 
-The code is a conversion to Go: a `Simplex3D` struct with its methods
-defined on it stands in for the original class.
+The code is a conversion to Go. Each noise is a struct type with a
+constructor that takes a seed and a `Noise` method: `NewPerlin2D`,
+`NewPerlin3D`, `NewSimplex2D` and `NewSimplex3D` return `*Perlin2D`,
+`*Perlin3D`, `*Simplex2D` and `*Simplex3D`.
 
 ## For coding assistants
 
 Read the org guide before you write code against this module: the plan
 root's [`AGENTS.md`](https://github.com/vibrantgio/organisation/blob/master/AGENTS.md).
 
-[`AGENTS.md`](./AGENTS.md) in this repository has the build and test commands,
-and — since nothing else in the organization says so — how to regenerate the
-four reference images the `TestImage*` tests compare against.
+The build and test commands are reached from that file.
+
+The four `TestImage*` tests draw a noise image and compare its PNG encoding
+byte for byte with `ref_p2d.png`, `ref_p3d.png`, `ref_s2d.png` and
+`ref_s3d.png`, which the tests embed. To regenerate those reference images,
+set `write_reference_image` to `true` in `noise_test.go`, run
+`go test -run TestImage .` (each test then writes its image next to its source
+file), set the constant back to `false`, and run `go test ./...` again: the
+first run still compares against the images embedded before the write.
